@@ -47,7 +47,7 @@
                                                 {{ $post->content }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                <button wire:click="$emit('openModal', 'edit-post', {{ json_encode([$post]) }})" class="px-4 py-2 text-white bg-yellow-500 rounded">EDIT</button>
+                                                <button wire:click="$emit('openModal', 'edit-post', {{ json_encode([$post]) }})" class="px-4 py-2 text-white bg-blue-500 rounded">EDIT</button>
                                             </td>
                                             <td class="px-6 py-4">
                                                 <button onclick="deletePost({{$post->id}})" class="bg-red-700 px-4 py-2 text-white rounded">DELETE</button>

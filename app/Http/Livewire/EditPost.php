@@ -10,8 +10,8 @@ class EditPost extends ModalComponent
 {
     public Post $post;
     protected $rules = [
-        'title' => 'required',
-        'content' => 'required|max:500',
+        'post.title' => 'required',
+        'post.content' => 'required|max:500',
     ];
     public function mount(Post $post)
     {
@@ -21,8 +21,6 @@ class EditPost extends ModalComponent
     {
         $this->validate();
  
-        $this->post->title = $this->title;
-        $this->post->content = $this->content;
         $this->post->updated_at = Carbon::now();
         $this->post->save();
 
